@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rental Details - Second Hand Car Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="asset/css/style.css">
+</head>
+<body>
+    <section id="rental-details">
+        <h1>Rental Details</h1>
+        <table id="detailsTable">
+            <thead>
+                <tr>
+                    <th>S.N.</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Email</th>
+                    <th>Car Model</th>
+                    <th>Phone Number</th>
+                    <th>Rental Duration (Days)</th>
+                    <th>Actions</th> <!-- Add a new column for actions -->
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be populated here -->
+            </tbody>
+        </table>
+        <button onclick="window.location.href='rent.html'">Go Back to Rental Page</button>
+    </section>
+
+    <script>
+        // Retrieve the saved rental data from localStorage
+        const rentals = JSON.parse(localStorage.getItem("rentalData")) || [];
+
+        // Get the table body where data will be displayed
+        const tableBody = document.querySelector("#detailsTable tbody");
+
+        // Function to populate the table with the stored data
+        function populateTable() {
+            tableBody.innerHTML = ""; // Clear any existing data
+            rentals.forEach((rental, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${rental.name}</td>
+                    <td>${rental.address}</td>
+                    <td>${rental.email}</td>
+                    <td>${rental.car}</td>
+                    <td>${rental.number}</td>
+                    <td>${rental.rentalDuration}</td>
+                    <td><button onclick="deleteRow(${index})">Delete</button></td> <!-- Add delete button -->
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Function to delete a row
+        function deleteRow(index) {
+            // Remove the item from the rentals array
+            rentals.splice(index, 1);
+            
+            // Update the localStorage with the modified array
+            localStorage.setItem("rentalData", JSON.stringify(rentals));
+            
+            // Repopulate the table
+            populateTable();
+        }
+
+        // Populate the table on page load
+        populateTable();
+    </script>
+</body>
+</html>

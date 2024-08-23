@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Buy Now - Second Hand Car Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="asset/css/style.css">
+</head>
+
+<body>
+
+    <section id="buy-now">
+        <h1>Buy Now</h1>
+        <p>Thank you for your interest in our cars. Please fill out the form below to proceed with your purchase.</p>
+        <form id="purchaseForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="car">Car Model:</label>
+                <input type="text" id="car" name="car" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number:</label>
+                <input type="tel" id="number" name="number" placeholder="+977-9841-555-555" required>
+            </div>
+            <button type="submit" id="button" name="button">Submit Purchase</button>
+        </form>
+        <br>
+        <img src="images/Car Buying.jpg" alt="Buying car" class="BlackCar">
+        <br>
+        <footer>
+            <div class="footer-section contact" id="contact">
+                <h3>Contact Us</h3>
+                <p>Address: Baneshwor-5, Kathmandu, Nepal</p>
+                <p>Phone: (977) 9841552233</p>
+                <p>Email: kantipurride07@gmail.com.com</p>
+            </div>
+
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <a href="https://www.instagram.com/">Instagram</a><br>
+                <a href="https://www.facebook.com/">Facebook</a><br>
+                <a href="https://twitter.com/">Twitter</a>
+            </div>
+        </footer>
+
+        <script>
+             document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("purchaseForm");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const formData = {
+            name: document.getElementById("name").value,
+            address: document.getElementById("address").value,
+            email: document.getElementById("email").value,
+            car: document.getElementById("car").value,
+            number: document.getElementById("number").value
+        };
+
+        // Load the purchases array from localStorage or initialize it as an empty array
+        let purchases;
+        try {
+            purchases = JSON.parse(localStorage.getItem("purchaseData"));
+            if (!Array.isArray(purchases)) {
+                purchases = [];
+            }
+        } catch (e) {
+            purchases = [];
+        }
+
+        // Add new form data to the purchases array
+        purchases.push(formData);
+
+        // Save the updated purchases array back to localStorage
+        localStorage.setItem("purchaseData", JSON.stringify(purchases));
+        
+        // Redirect to the purchase-details.html page
+        window.location.href = "purchase-details.html";
+    });
+});
+
+        </script>
+
+    </section>
+
+</body>
+
+</html>

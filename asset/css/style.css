@@ -1,0 +1,605 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  margin: 0;
+
+}
+
+.header,
+.nav,
+.BlackCar,
+.text-overlay,
+.car-list,
+.car {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+header {
+  background-color: #1F77B4;
+  color: #fff;
+  align-items: center;
+  align-items: left;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+  display: block;
+}
+
+.login {
+  list-style: none;
+  display: flex;
+  float: right;
+  margin: auto;
+}
+
+.search-area {
+  display: flex;
+  align-items: center;
+}
+
+.search-btn {
+  padding: 8px 12px 8px 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+  width: 200px;
+}
+
+.fa-magnifying-glass {
+  margin-left: 10px;
+  color: #333;
+  cursor: pointer;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  float: right;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  color: #888;
+  pointer-events: none;
+}
+
+#Signupbutton {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  column-gap: 0.5cm;
+}
+
+nav ul li {
+  margin: 0 2em;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  margin-right: 2%;
+}
+
+.BlackCar {
+  width: 100%;
+  height: 20cm;
+  object-fit: cover;
+  display: flex;
+  margin: 0 auto;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  color: white;
+  font-size: 18px;
+  text-align: left;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-height: 500px;
+  /* Adjust as needed */
+  overflow: hidden;
+}
+
+#small {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#yes {
+  font-size: 3.5em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  margin-top: auto;
+}
+
+#SELECT {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 50px;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+}
+
+.choose-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.choose {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  text-align: center;
+  /* Center-align the text */
+  line-height: 1.6;
+  /* Adjust line-height for better readability */
+}
+
+.car-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.car {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  box-sizing: border-box;
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.car img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.car-details {
+  padding: 15px;
+  text-align: left;
+}
+
+.car-details h2 {
+  font-size: 1.5em;
+  margin: 0;
+  color: #333;
+}
+
+.car-details p {
+  margin: 10px 0;
+  font-size: 1em;
+  color: #666;
+}
+
+.car-details ul {
+  padding: 0;
+  list-style: none;
+}
+
+.car-details ul li {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+.rent-now{
+  font-size: 15px;
+  background-color: rgb(251, 62, 9)
+}
+.Buy-now {
+  font-size: 15px;
+  background-color: #1c1b1b;
+}
+
+#buy-now {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  pointer-events: painted;
+}
+
+#buy-now h1 {
+  text-align: center;
+  color: #333;
+
+}
+
+#buy-now p {
+  text-align: center;
+  color: #666;
+}
+
+#login {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  pointer-events: painted;
+}
+
+#login h1 {
+  text-align: center;
+  color: #333;
+}
+
+#login p {
+  text-align: center;
+  color: #666;
+}
+
+.login-group {
+  margin-bottom: 15px;
+}
+
+.login-grpup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.details {
+  font-size: 13px;
+  color: #697780;
+  float: right;
+  margin: auto
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.carousel-images {
+  display: flex;
+}
+
+.inform-images {
+  display: flex;
+}
+
+.footer-section {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-section.social a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-section.social i {
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+#center {
+  text-align: center;
+  font-size: 18px;
+}
+
+.Blog {
+  width: 100%;
+}
+
+
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Section Styles */
+#purchase-details {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Table Styles */
+#detailsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+#detailsTable thead {
+    background-color: #333;
+    color: #fff;
+}
+
+#detailsTable th, #detailsTable td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#detailsTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#detailsTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Button Styles */
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+/* Responsive Styles */
+
+@media (max-width:992px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2 em;
+
+  }
+
+  .choose,
+  .car {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  .choose-list,
+  .car-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+    column-gap: 2.5em;
+    font-size: medium;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .logo {
+    width: 170px;
+  }
+
+  header {
+    align-items: center;
+    font-size: 1.2em;
+    display: flex;
+    column-gap: 1.8em;
+  }
+
+  #small {
+    font-size: 1.1em;
+  }
+
+  #yes {
+    font-size: 1.7em;
+  }
+
+  #SELECT {
+    font-size: 40px;
+  }
+
+  .text-overlay {
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .choose,
+  .car {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+
+  .choose-list,
+  .car-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  .logo {
+    width: 170px;
+  }
+
+  header {
+    align-items: center;
+    font-size: 0.1rem;
+    display: flex;
+  }
+
+  #SELECT {
+    font-size: 1.7em;
+  }
+
+  #small {
+    font-size: 0.8em;
+  }
+
+  #yes {
+    font-size: 1.2em;
+  }
+
+  .text-overlay {
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header nav ul {
+    flex-direction: row;
+  }
+
+  header nav ul li {
+    margin: 0.5rem;
+  }
+
+  header nav ul li a {
+    font-size: 0.8rem;
+  }
+
+  .text-overlay {
+    top: 30%;
+    left: 30%;
+    text-align: center;
+    width: 70%;
+  }
+
+  .logo {
+    width: 130px;
+  }
+
+  .BlackCar {
+    height: auto;
+  }
+
+  .car-details h2 {
+    font-size: 1.2em;
+  }
+
+  .car-details p,
+  .car-details ul li {
+    font-size: 0.9em;
+  }
+
+  #small {
+    font-size: small;
+  }
+
+  #yes {
+    font-size: 1em;
+
+  }
+
+  #SELECT {
+    font-size: 1.5em;
+  }
+}
